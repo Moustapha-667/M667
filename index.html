@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts : Syne (display futuriste) + Space Mono (code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ░░░ CURSOR CUSTOM ░░░ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ░░░ CANVAS PARTICULES FOND ░░░ -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- ░░░ NAVBAR ░░░ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>M667<span class="logo-bracket">]</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="nav-link">Accueil</a></li>
+      <li><a href="#about" class="nav-link">À propos</a></li>
+      <li><a href="#skills" class="nav-link">Compétences</a></li>
+      <li><a href="#projects" class="nav-link">Projets</a></li>
+      <li><a href="#vision" class="nav-link">Vision</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ░░░ HERO ░░░ -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-tag reveal-up">Étudiant en Génie Informatique · L1</p>
+      <h1 class="hero-name reveal-up">
+        Mouhamadou<br />
+        <span class="neon-text">Moustapha</span> BA
+      </h1>
+      <p class="hero-slogan reveal-up">
+        Code · Design · Innovation
+        <span class="cursor-blink">_</span>
+      </p>
+      <p class="hero-desc reveal-up">
+        Futur expert en ingénierie logicielle &amp; réseaux.<br />
+        Je construis des interfaces qui marquent les esprits.
+      </p>
+      <div class="hero-cta reveal-up">
+        <a href="#projects" class="btn-neon">Voir mes projets</a>
+        <a href="#contact" class="btn-ghost">Me contacter</a>
+      </div>
+    </div>
+
+    <!-- Illustration décorative droite -->
+    <div class="hero-deco">
+      <div class="hex-ring hex-ring-1"></div>
+      <div class="hex-ring hex-ring-2"></div>
+      <div class="hex-ring hex-ring-3"></div>
+      <div class="avatar-wrapper">
+        <div class="avatar-placeholder">
+          <span></span>
+          <p class="avatar-hint"></p>
+          <img src="c:\Users\hp\.vscode\Portfolio2\WhatsApp Image 2026-03-28 at 23.12.55.jpeg" alt="M667" class="avatar-img" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ░░░ ABOUT ░░░ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">À propos de moi</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-intro">
+            Je m'appelle <strong class="neon-text">Mouhamadou Moustapha BA</strong>, étudiant en première année de Licence Génie Informatique à <strong class="neon-text">l'Université IBA DER THIAM de THIES</strong>. Passionné par les algorithmes, le développement logiciel et la cybersécurité, je construis chaque jour les bases d'une carrière internationale.
+          </p>
+          <p>
+            Mon parcours académiques du BFEM au Bac, puis vers la licence en informatique reflète une progression constante et déterminée. Je combine compétences techniques et créativité visuelle pour créer des solutions complètes.
+          </p>
+          <p>
+            Mon objectif : devenir <strong>expert en ingénierie logicielle, réseaux et télécommunications</strong>, travailler sur des projets tech à l'international, et allier la rigueur du code à la protection des données.
+          </p>
+        </div>
+
+        <div class="about-timeline">
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2025 — 2026</span>
+              <h4>Licence Génie Informatique (L1)</h4>
+              <p>Algorithmique, programmation, introduction aux systèmes d'exploitation.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2024-2025</span>
+              <h4>Baccalauréat obtenu</h4>
+              <p>Série scientifique S2 — base solide en mathématiques et sciences physiques.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <span class="tl-year">2021-2022</span>
+              <h4>BFEM (Brevet de Fin d'Études Moyennes)</h4>
+              <p>Première étape d'un parcours académique rigoureux.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ SKILLS ░░░ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Compétences</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Informatique -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="8" width="40" height="28" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M17 22l-5 5 5 5M31 22l5 5-5 5M23 16l2 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M16 44h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Informatique</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Algorithmique</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></li>
+            <li><span class="skill-name">Programmation (Python, C)</span><div class="skill-bar"><div class="skill-fill" data-width="65"></div></div></li>
+            <li><span class="skill-name">Réseaux informatiques</span><div class="skill-bar"><div class="skill-fill" data-width="5"></div></div></li>
+            <li><span class="skill-name">HTML / CSS</span><div class="skill-bar"><div class="skill-fill" data-width="60"></div></div></li>
+          </ul>
+        </div>
+
+        <!-- Design -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M24 4v4M24 40v4M4 24h4M40 24h4M9.4 9.4l2.8 2.8M35.8 35.8l2.8 2.8M9.4 38.6l2.8-2.8M35.8 12.2l2.8-2.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Design Graphique</h3>
+          <ul class="skill-list">
+            <li><span class="skill-name">Montage photo</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></li>
+            <li><span class="skill-name">Création d'affiches</span><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></li>
+            <li><span class="skill-name">Conception de logos</span><div class="skill-bar"><div class="skill-fill" data-width="65"></div></div></li>
+            <li><span class="skill-name">Picsart &amp; outils mobiles</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></li>
+          </ul>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skill-card">
+          <div class="skill-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z" stroke="currentColor" stroke-width="2"/>
+              <path d="M24 16v8l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Soft Skills</h3>
+          <div class="soft-skills">
+            <span class="tag">Créativité</span>
+            <span class="tag">Autonomie</span>
+            <span class="tag">Ambition</span>
+            <span class="tag">Curiosité</span>
+            <span class="tag">Adaptabilité</span>
+            <span class="tag">Rigueur</span>
+            <span class="tag">Vision internationale</span>
+            <span class="tag">Esprit d'analyse</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ PROJECTS ░░░ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Mes projets</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Projet 1 -->
+        <article class="project-card" data-category="Design">
+          <div class="project-top">
+            <span class="project-category">Design · Contenu Digital</span>
+            <div class="project-num">01</div>
+          </div>
+          <div class="project-visual yt-thumb">
+            <div class="yt-mockup">
+              <div class="yt-header">
+                <div class="yt-avatar">▶</div>
+                <div class="yt-info">
+                  <div class="yt-title-bar"></div>
+                  <div class="yt-sub-bar"></div>
+                </div>
+              </div>
+              <div class="yt-banner">
+                <span class="yt-label">IMMIGRÉ PARISIEN</span>
+                <div class="yt-tag-line">Football</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>Miniature — Chaîne YouTube</h3>
+            <p>Création de la miniature d'une chaîne YouTube. Miniature où Kylian Mbappe tient le maillot du PSG en portant un maillot du Real Madrid.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Picsart</span>
+              <span class="tool-tag">Montage photo</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 2 -->
+        <article class="project-card" data-category="Design">
+          <div class="project-top">
+            <span class="project-category">Design · Restauration</span>
+            <div class="project-num">02</div>
+          </div>
+          <div class="project-visual restaurant">
+            <div class="resto-mockup">
+              <div class="resto-top-bar">TERANGA FOODIES</div>
+              <div class="resto-body">
+                <div class="resto-tag">🇸🇳 Cuisine Sénégalaise</div>
+                <div class="resto-subtitle">Authenticité &amp; Saveurs d'Afrique</div>
+                <div class="resto-location">📍 France</div>
+              </div>
+              <div class="resto-deco"></div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>Affiche — TERANGA FOODIES</h3>
+            <p>Conception d'une affiche promotionnelle pour un restaurant de cuisine sénégalaise situé en France. Le design capture l'identité culturelle africaine avec des couleurs chaudes et une mise en page accueillante.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Picsart</span>
+              <span class="tool-tag">Création d'affiche</span>
+              <span class="tool-tag">Identité visuelle</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projet 3 -->
+        <article class="project-card" data-category="Branding">
+          <div class="project-top">
+            <span class="project-category">Branding · Identité</span>
+            <div class="project-num">03</div>
+          </div>
+          <div class="project-visual branding">
+            <div class="brand-mockup">
+              <div class="brand-logo-area">
+                <div class="brand-logo-circle">
+                  <span>MABFA</span>
+                </div>
+              </div>
+              <div class="brand-card">
+                <div class="brand-card-logo">M</div>
+                <div class="brand-card-info">
+                  <div class="brand-card-name">MABFA</div>
+                  <div class="brand-card-role">Membre Premium</div>
+                </div>
+                <div class="brand-card-id">#0042</div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3>Logo &amp; Carte Membre — MABFA</h3>
+            <p>Création complète de l'identité visuelle de MABFA : conception du logo principal et design d'une carte membre avec un rendu professionnel, élégant et mémorable.</p>
+            <div class="project-tools">
+              <span class="tool-tag">Picsart</span>
+              <span class="tool-tag">Logo Design</span>
+              <span class="tool-tag">Carte Membre</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ VISION ░░░ -->
+  <section class="section section-alt" id="vision">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Ma vision</h2>
+      </div>
+
+      <div class="vision-content">
+        <div class="vision-text">
+          <p class="vision-quote">
+            "Je ne vise pas simplement un emploi —<br />
+            je construis une <span class="neon-text">expertise globale</span>."
+          </p>
+          <p>
+            Ma trajectoire est claire : maîtriser les réseaux &amp; télécommunications, la cybersécurité et le cloud computing pour contribuer à des projets d'envergure internationale. Chaque compétence acquise aujourd'hui est une brique d'un édifice ambitieux.
+          </p>
+          <p>
+            Sur le plan du développement web, je vise la transition vers des langages comme <strong>JavaScript, Python, PHP ou MySQL</strong>, pour combiner ingénierie technique et excellence visuelle.
+          </p>
+        </div>
+
+        <div class="vision-goals">
+          <div class="goal-item">
+            <div class="goal-icon">🔐</div>
+            <div>
+              <h4>Cybersécurité</h4>
+              <p>Comprendre et défendre les systèmes contre les menaces modernes.</p>
+            </div>
+          </div>
+          <div class="goal-item">
+            <div class="goal-icon">☁️</div>
+            <div>
+              <h4>Cloud Computing</h4>
+              <p>Déployer et gérer des architectures scalables sur AWS, Azure ou GCP.</p>
+            </div>
+          </div>
+          <div class="goal-item">
+            <div class="goal-icon">📡</div>
+            <div>
+              <h4>Réseaux &amp; Télécoms</h4>
+              <p>Concevoir des infrastructures réseau robustes à l'échelle mondiale.</p>
+            </div>
+          </div>
+          <div class="goal-item">
+            <div class="goal-icon">💻</div>
+            <div>
+              <h4>Développement Web</h4>
+              <p>Maîtriser les langages de programmation pour créer des applications web innovantes.</p>
+            </div>
+          </div>
+          <div class="goal-item">
+            <div class="goal-icon">🌍</div>
+            <div>
+              <h4>Carrière Internationale</h4>
+              <p>Travailler sur des projets tech à travers le monde.</p>
+            </div>
+          </div>
+          <div class="goal-item">
+            <div class="goal-icon">💡</div>
+            <div>
+              <h4>Entrepreneuriat Tech</h4>
+              <p>Créer des solutions digitales qui ont un impact réel.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ CONTACT ░░░ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Contact</h2>
+      </div>
+
+      <div class="contact-content">
+        <p class="contact-intro">
+          Une opportunité, un projet freelance, une collaboration ?<br />
+          N'hésitez pas à me contacter.
+        </p>
+
+        <div class="contact-grid">
+          <a href="mailto:bameth122@gmail.com" class="contact-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 8l9 6 9-6M3 8v10a1 1 0 001 1h16a1 1 0 001-1V8M3 8a1 1 0 011-1h16a1 1 0 011 1"/>
+              </svg>
+            </div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">bameth122@gmail.com</div>
+          </a>
+
+          <a href="https://wa.me/221771252313" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12.004 2.003C6.479 2.003 2.003 6.479 2.003 12.004c0 1.764.459 3.459 1.333 4.954L2 22l5.197-1.362A9.944 9.944 0 0012.004 22c5.525 0 10.001-4.476 10.001-10.001 0-5.524-4.476-9.996-10.001-9.996zm0 18.191a8.18 8.18 0 01-4.161-1.133l-.298-.177-3.088.81.822-3.008-.195-.309a8.151 8.151 0 01-1.253-4.374c0-4.519 3.676-8.195 8.195-8.195 4.518 0 8.194 3.676 8.194 8.195 0 4.518-3.676 8.191-8.216 8.191z"/>
+              </svg>
+            </div>
+            <div class="contact-label">WhatsApp</div>
+            <div class="contact-value">+221 77 125 23 13</div>
+          </a>
+
+          <a href="https://instagram.com/" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
+            <div class="contact-label">Instagram</div>
+            <div class="contact-value">@moustaphaba_04</div>
+          </a>
+
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9.5a8.16 8.16 0 004.77 1.52V7.55a4.85 4.85 0 01-1-.86z"/>
+              </svg>
+            </div>
+            <div class="contact-label">TikTok</div>
+            <div class="contact-value">@m667.vxmst88</div>
+          </a>
+        </div>
+
+        <div class="contact-cta">
+          <a href="mailto:bameth122@gmail.com" class="btn-neon">Envoyer un email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ FOOTER ░░░ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2025 — <span class="neon-text">Mouhamadou Moustapha BA</span></p>
+      <p class="footer-sub">Étudiant en Génie Informatique · Conçu avec passion</p>
+    </div>
+  </footer>
+
+</body>
+</html>
